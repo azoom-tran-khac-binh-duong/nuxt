@@ -1,0 +1,26 @@
+@mixin media-query($breakpoint) {
+	$raw-query: map-deep-get($grid, "breakpoints", $breakpoint);
+	
+	@if $raw-query {
+		$query: if(
+				type-of($raw-query) == 'string',
+				unquote($raw-query),
+				inspect($raw-query)
+		);
+		
+		@media (min-width: #{$query}) {
+			@content;
+		}
+
+	} @else {
+		@error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+	}
+}
+
+@mixin box-sizing($values) {
+	box-sizing: $values;
+	-moz-box-sizing: $values;
+	-webkit-box-sizing: $values;
+	-o-box-sizing: $values;
+}

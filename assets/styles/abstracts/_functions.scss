@@ -1,0 +1,11 @@
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+	@return $map;
+}
+
+@function theme-property($theme, $group, $property) {
+	$value: map-deep-get($themes, $theme, $group, $property);
+	@return $value;
+}

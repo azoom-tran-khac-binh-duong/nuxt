@@ -1,0 +1,77 @@
+// Theme config
+$themes: (
+	default: (
+		/// colors
+		colors: (
+			primary: #444D74,
+			secondary: #F0C14A,
+			accent: #EFE8D9,
+			light: #F7F6F0,
+			dark: #343434,
+			font-base: #343434,
+			font-headline: #444D74
+		),
+		/// typography
+		typography: (
+			base-family: 'DM Sans',
+			headline-family: 'DM Sans',
+			base-size: 14px
+		),
+		/// radius
+		radius: (
+			sm: 0.5rem,
+			md: 1rem,
+			lg: 2rem
+		),
+		/// spacing
+		spacing: (
+			sm: 0.5rem,
+			md: 1rem,
+			lg: 2rem
+		),
+		/// shadow
+		shadow: (
+			sm: 0 2px 6px rgba(0,0,0,0.075),
+			md: 0 9px 16px rgba(0,0,0,0.15),
+			lg: 0 12px 24px rgba(0,0,0,0.25)
+		)
+	)
+);
+
+// Theme helpers
+$theme: default;
+
+$color-primary: theme-property($theme, colors, primary);
+$color-secondary: theme-property($theme, colors, secondary);
+$color-accent: theme-property($theme, colors, accent);
+$color-light: theme-property($theme, colors, light);
+$color-dark: theme-property($theme, colors, dark);
+$color-font-base: theme-property($theme, colors, font-base);
+$color-font-headline: theme-property($theme, colors, font-headline);
+
+$font-base-size: theme-property($theme, typography, base-size);
+$font-base-family: theme-property($theme, typography, base-family);
+$font-headline-family: theme-property($theme, typography, headline-family);
+
+$radius-small: theme-property($theme, radius, small);
+$radius-medium: theme-property($theme, radius, medium);
+$radius-large: theme-property($theme, radius, large);
+
+$spacing-small: theme-property($theme, spacing, small);
+$spacing-medium: theme-property($theme, spacing, medium);
+$spacing-large: theme-property($theme, spacing, large);
+
+$shadow-small: theme-property($theme, shadow, small);
+$shadow-medium: theme-property($theme, shadow, medium);
+$shadow-large: theme-property($theme, shadow, large);
+
+
+// Grid config
+$grid: (
+	breakpoints: (
+		sm: 600px,
+		md: 900px,
+		lg: 1200px,
+		xl: 1500px
+	)
+);
