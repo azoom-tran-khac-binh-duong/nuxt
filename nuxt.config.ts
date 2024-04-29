@@ -26,4 +26,12 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: true,
   },
+  runtimeConfig: {
+    public: {
+      sentry: {
+        dsn: process.env.SENTRY_DSN,
+        environment: process.env.SENTRY_ENVIRONMENT,
+      },
+    },
+  },
 })
