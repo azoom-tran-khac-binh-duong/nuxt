@@ -34,6 +34,12 @@ $themes: (
 			sm: 0 2px 6px rgba(0,0,0,0.075),
 			md: 0 9px 16px rgba(0,0,0,0.15),
 			lg: 0 12px 24px rgba(0,0,0,0.25)
+		),
+		breakpoints: (
+			sm: 600px,
+			md: 900px,
+			lg: 1200px,
+			xl: 1500px
 		)
 	)
 );
@@ -53,25 +59,19 @@ $font-base-size: theme-property($theme, typography, base-size);
 $font-base-family: theme-property($theme, typography, base-family);
 $font-headline-family: theme-property($theme, typography, headline-family);
 
-$radius-small: theme-property($theme, radius, small);
-$radius-medium: theme-property($theme, radius, medium);
-$radius-large: theme-property($theme, radius, large);
+$radius-sm: theme-property($theme, radius, sm);
+$radius-md: theme-property($theme, radius, md);
+$radius-lg: theme-property($theme, radius, lg);
 
-$spacing-small: theme-property($theme, spacing, small);
-$spacing-medium: theme-property($theme, spacing, medium);
-$spacing-large: theme-property($theme, spacing, large);
+$spacing-sm: theme-property($theme, spacing, sm);
+$spacing-md: theme-property($theme, spacing, md);
+$spacing-lg: theme-property($theme, spacing, lg);
 
-$shadow-small: theme-property($theme, shadow, small);
-$shadow-medium: theme-property($theme, shadow, medium);
-$shadow-large: theme-property($theme, shadow, large);
+$shadow-sm: theme-property($theme, shadow, sm);
+$shadow-md: theme-property($theme, shadow, md);
+$shadow-lg: theme-property($theme, shadow, lg);
 
-
-// Grid config
-$grid: (
-	breakpoints: (
-		sm: 600px,
-		md: 900px,
-		lg: 1200px,
-		xl: 1500px
-	)
-);
+$max-width-sm: theme-property($theme, breakpoints, sm);
+$max-width-md: theme-property($theme, breakpoints, md);
+$max-width-lg: theme-property($theme, breakpoints, lg);
+$max-width-xl: theme-property($theme, breakpoints, xl);
