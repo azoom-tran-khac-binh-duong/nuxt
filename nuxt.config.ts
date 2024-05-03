@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       'DM Sans': [300, 400, 700],
     },
     display: 'swap',
-  }], '@nuxtjs/fontaine', '@nuxt/image', 'nuxt-icon'],
+  }], '@nuxtjs/fontaine', '@nuxt/image', 'nuxt-icon', '@pinia/nuxt'],
   eslint: {
     config: {
       stylistic: true,
