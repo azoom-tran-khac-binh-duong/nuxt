@@ -1,5 +1,5 @@
 @mixin media-query($breakpoint) {
-	$raw-query: map-deep-get($grid, "breakpoints", $breakpoint);
+	$raw-query: theme-property($theme, breakpoints, $breakpoint);
 	
 	@if $raw-query {
 		$query: if(
