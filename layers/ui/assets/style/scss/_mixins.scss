@@ -1,0 +1,41 @@
+$font-styles: (
+  h1: (
+    font-weight: var(--font-weight-bold),
+    font-size: var(--font-size-h1),
+    line-height: var(--line-height),
+    letter-spacing: var(--letter-spacing-lg),
+  ),
+  // Define more font styles here  
+);
+
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px,
+) !default;
+
+@mixin font-style($style-name) {
+  @if map-has-key($font-styles, $style-name) {
+    $style: map-get($font-styles, $style-name);
+
+    @each $property, $value in $style {
+      #{$property}: #{$value};
+    }
+  } @else {
+    @warn "`#{$style-name}` not found.";
+  }
+}
+
+@mixin media-query-up($breakpoint: sm) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @if $breakpoint-value {
+    @media (min-width: #{$breakpoint-value}) {
+      @content;
+    }
+  } @else {
+    @warn "`#{$breakpoint}` not found.";
+  }
+}
